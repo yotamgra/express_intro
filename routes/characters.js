@@ -7,6 +7,9 @@ router.get("/", (req, res) => {
   // console.log(characters[0]);
 });
 
+const searchRouter = require('./search')
+router.use('/search', searchRouter)
+
 router.get("/:id", (req, res) => {
   const { id } = req.params;
   console.log(id);
@@ -22,5 +25,7 @@ router.use('/blood-type', bloodTypeRouter)
 
 const birthRouter = require('./birth')
 router.use('/birth', birthRouter)
+
+
 
 module.exports = router;
