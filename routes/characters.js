@@ -17,4 +17,7 @@ router.get("/:id", (req, res) => {
   character ? res.send(character) : res.send("no character was found");
 });
 
+const bloodTypeRouter = require('./blood-type')
+router.use('/blood-type', bloodTypeRouter)
+
 module.exports = router;
