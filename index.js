@@ -8,6 +8,8 @@ app.get('/',(req,res)=>{
 
 const charactersRouter = require('./routes/characters')
 app.use('/characters', charactersRouter)
+const bloodTypeRouter = require('./routes/blood-type')
+app.use('/characters/blood-type', bloodTypeRouter)
 
 
 app.listen(5000)
