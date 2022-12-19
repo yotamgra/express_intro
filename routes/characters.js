@@ -20,4 +20,7 @@ router.get("/:id", (req, res) => {
 const bloodTypeRouter = require('./blood-type')
 router.use('/blood-type', bloodTypeRouter)
 
+const birthRouter = require('./birth')
+router.use('/birth', birthRouter)
+
 module.exports = router;
